@@ -1501,3 +1501,17 @@ body {
     color: var(--deep);
   }
 }
+
+/* Pe telefon, linkurile din meniul hamburger sunt MEREU verzi */
+@media (max-width: 768px) {
+  .nav-menu .nav-link,
+  .site-header .nav-menu .nav-link,
+  .site-header.scrolled .nav-menu .nav-link {
+    color: var(--deep) !important;
+  }
+
+  .nav-menu .nav-link:hover,
+  .nav-menu .nav-link:focus {
+    color: var(--deep) !important;
+  }
+}
