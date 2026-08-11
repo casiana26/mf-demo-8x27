@@ -1491,3 +1491,13 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .nav-menu .nav-link {
+    color: var(--deep-soft);
+  }
+
+  .nav-menu .nav-link:hover {
+    color: var(--deep);
+  }
+}
