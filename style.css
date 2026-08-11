@@ -220,7 +220,16 @@ p{ line-height: 1.75; color: var(--deep-soft); font-size: 1rem; }
   padding: 0 1.75rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  position: relative;
+}
+
+@media (min-width: 769px) {
+  .nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .nav-logo{
@@ -246,7 +255,7 @@ p{ line-height: 1.75; color: var(--deep-soft); font-size: 1rem; }
 .nav-link{
   font-size: 0.92rem;
   font-weight: 500;
-  color: var(--deep-soft);
+  color: #f7f1e8;;
   position: relative;
   padding-bottom: 4px;
   transition: color 0.3s ease;
@@ -259,8 +268,17 @@ p{ line-height: 1.75; color: var(--deep-soft); font-size: 1rem; }
   background: var(--dusty-rose);
   transition: width 0.3s ease;
 }
-.nav-link:hover{ color: var(--deep); }
+.nav-link:hover{ color: #ffffff; }
 .nav-link:hover::after{ width: 100%; }
+
+/* Când apare bara albă la scroll */
+.site-header.scrolled .nav-link {
+  color: var(--deep-soft);
+}
+
+.site-header.scrolled .nav-link:hover {
+  color: var(--deep);
+}
 
 .nav-toggle{
   display: none;
@@ -301,6 +319,7 @@ p{ line-height: 1.75; color: var(--deep-soft); font-size: 1rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 .hero-media-overlay{
   position: absolute;
@@ -1404,4 +1423,71 @@ p{ line-height: 1.75; color: var(--deep-soft); font-size: 1rem; }
     width:28px;
     height:28px;
   }
+}
+
+@media (max-width: 768px) {
+  .hero-media img {
+    object-position: 35% center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .review-submit-wrap {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .review-form {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .form-row {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .review-form input,
+  .review-form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .review-form textarea {
+    resize: vertical;
+  }
+
+  .review-form .btn-full {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .rating-fieldset {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
